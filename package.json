@@ -2,12 +2,16 @@
   "name": "app",
   "version": "1.0.0",
   "description": "Create a modern, AI-powered, modular ERP platform that: - Is as easy to use as consumer apps (like Notion or Stripe) - Is as powerful as traditional ERPs (like SAP, Oracle, Odoo) - Is deeply customizable without requiring heavy technical expertise - Supports multi-tenant architecture with strict data isolation - Provides real-time insights, automation, and predictive intelligence - Can scale from a small business to a multinational organization seamlessly",
-  "main": "index.js",
-  "directories": {
-    "doc": "docs"
-  },
+  "private": true,
+  "workspaces": [
+    "apps/*",
+    "packages/*"
+  ],
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "npm run dev --workspaces --if-present",
+    "build": "npm run build --workspaces --if-present",
+    "test": "echo \"Tests will be added in subsequent modules\"",
+    "lint": "npm run lint --workspaces --if-present"
   },
   "repository": {
     "type": "git",
